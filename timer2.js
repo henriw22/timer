@@ -10,7 +10,8 @@ rl.prompt();
 
 rl.on('line', (line) => {
   if (isNaN(line) && line === 'b') {
-    console.log('test');
+    process.stdout.write('\x07')
+    // console.log('test');
   }
   if (!isNaN(line)) {
     console.log(`"setting timer for ${line} seconds..."`);
